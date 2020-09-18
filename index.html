@@ -487,19 +487,40 @@
           </svg>
         </button>
 
-        <form action="js-speaker-form">
-          <label for="name">Оставьте свои данные, мы вам перезвоним</label>
-          <label for="name">Имя</label>
-          <input type="text" name="name" id="name">
+        
+        <form action="form js-speaker-form">
+          
+          <label class="data" for="name">Оставьте свои данные, мы вам перезвоним</label> <br>
 
-          <label for="tel">Телефон</label>
-          <input type="tel" name="tel" id="tel">
+          <div class="form-field">
+            <label class="from-label" for="name">Имя</label>
+            <input class="from-input" type="text" name="name" id="name"  autofocus> 
+          </div>
 
-          <label for="mail">Почта</label>
-          <input type="email" name="mail" id="mail">
 
-          <button type="submit">Отправить</button>
+          <div class="form-field">
+          <label class="from-label" for="tel">Телефон</label>
+          <input class="from-input" type="tel" name="tel" id="tel">
+        </div>
+
+        <div class="form-field">
+          <label class="from-label" for="mail">Почта</label>
+          <input class="from-input" type="email" name="mail" id="mail">
+        </div>
+
+        <div class="form-field">
+          <label class="from-label" for="comment">Комментарий</label> 
+          <textarea class="form-textarea" name="comment" id="comment" cols="30" rows="10" placeholder="Введите текст"></textarea>
+        </div>
+
+       <div class="checkbox">
+          <input class="checkbox-input" type="checkbox" name="policy" id="policy">
+          <label  class="checkbox-label" for="policy">Соглашаюсь с рассылкой и принимаю Условия договора</label> <br>
+        </div>
+          
+          <button type="submit" class="form-button">Отправить</button>
         </form>
+      </div>
 
       </div>
     </div>

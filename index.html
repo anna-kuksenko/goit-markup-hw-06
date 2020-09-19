@@ -476,6 +476,21 @@
             </li>
           </ul>
         </div>
+
+        <form action="form js-speaker-form" method="post" id="form">
+          
+
+        <div class="footer block">
+          <label class="footer-label" for="mail">Подпишитесь на рассылку</label>
+          <input class="footer-input" type="email" name="mail" id="mail" placeholder="E-mail">
+        </div>
+          
+          <button type="submit" class="form-button">Подписаться</button>
+          <svg class="icon-ffooter">
+            <use href="./img/icons/sprite.svg#icon-icon-send"></use>
+          </svg> 
+        </form>
+      </div>
       </div>
     </footer>
 
@@ -490,22 +505,34 @@
         
         <form action="form js-speaker-form" method="post" id="form">
           
-          <label class="data" for="name">Оставьте свои данные, мы вам перезвоним</label> <br>
+          <label class="data" for="name">Оставьте свои данные, мы вам перезвоним</label> 
 
           <div class="form-field">
             <label class="from-label" for="name">Имя</label>
-            <input class="from-input" type="text" name="name" id="name"  autofocus> 
+            <input class="from-input" type="text" name="name" id="name"  autofocus>
+          
+            <svg class="icon-form">
+              <use href="./img/icons/sprite.svg#icon-person"></use>
+            </svg> 
+          
           </div>
 
 
           <div class="form-field">
           <label class="from-label" for="tel">Телефон</label>
           <input class="from-input" type="tel" name="tel" id="tel">
+          <svg class="icon-form">
+            <use href="./img/icons/sprite.svg#icon-phone"></use>
+          </svg> 
         </div>
 
         <div class="form-field">
           <label class="from-label" for="mail">Почта</label>
           <input class="from-input" type="email" name="mail" id="mail">
+          <svg class="icon-form">
+            <use href="./img/icons/sprite.svg#icon-email"></use>
+          </svg> 
+        
         </div>
 
         <div class="form-field">
@@ -515,7 +542,7 @@
 
        <div class="checkbox">
           <input class="checkbox-input" type="checkbox" name="policy" id="policy">
-          <label  class="checkbox-label" for="policy">Соглашаюсь с рассылкой и принимаю Условия договора</label> <br>
+          <label  class="checkbox-label" for="policy">Соглашаюсь с рассылкой и принимаю  <a href="" class="contract">Условия договора</a>  </label> 
         </div>
           
           <button type="submit" class="form-button">Отправить</button>
@@ -524,6 +551,8 @@
 
       </div>
     </div>
+
+   
 
     <script>
       (() => {
@@ -541,5 +570,23 @@
         }
       })();
     </script>
+
+
+<script>
+(() => {
+  document
+    .querySelector('.js-speaker-form')
+    .addEventListener('submit', e => {
+      e.preventDefault();
+
+      new FormData(e.currentTarget).forEach((value, name) =>
+        console.log(`${name}: ${value}`),
+      );
+
+      e.currentTarget.reset();
+    });
+})();
+</script>
+
   </body>
 </html>

@@ -148,7 +148,7 @@ button:focus {
 .butclose-icon {
   position: absolute;
   top: 8px;
-  right: 7px;
+  right: 8px;
   display: inline-block;
   align-items: center;
 
@@ -178,8 +178,8 @@ button:focus {
   justify-content: center;
   align-items: center;
 
-  width: 18px;
-  height: 18px;
+  width: 17px;
+  height: 17px;
 
 
   color: #000000;

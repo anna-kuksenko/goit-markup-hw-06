@@ -270,6 +270,7 @@ color: #212121;
   padding-left: 40px;
   width: 448px;
   height: 40px;
+  outline:none;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
